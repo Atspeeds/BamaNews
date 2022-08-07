@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "BN.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BN.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BN.Application.Contract.dll": {}
+        }
+      },
+      "BN.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BN.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BN.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BN.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BN.Application.Contract/BN.Application.Contract.csproj",
+      "msbuildProject": "../BN.Application.Contract/BN.Application.Contract.csproj"
+    },
+    "BN.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BN.Domain/BN.Domain.csproj",
+      "msbuildProject": "../BN.Domain/BN.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "BN.Application.Contract >= 1.0.0",
+      "BN.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\AMIRPC\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application\\BN.Application.csproj",
+      "projectName": "BN.Application",
+      "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application\\BN.Application.csproj",
+      "packagesPath": "C:\\Users\\AMIRPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\AMIRPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj": {
+              "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj"
+            },
+            "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Domain\\BN.Domain.csproj": {
+              "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Domain\\BN.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Application.deps.json
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Application.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\ref\BN.Application.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Application.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.csproj.AssemblyReference.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.AssemblyInfoInputs.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.AssemblyInfo.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.csproj.CoreCompileInputs.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\ref\BN.Application.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Domain.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Application.Contract.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\bin\Debug\net5.0\BN.Domain.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application\obj\Debug\net5.0\BN.Application.csproj.CopyComplete

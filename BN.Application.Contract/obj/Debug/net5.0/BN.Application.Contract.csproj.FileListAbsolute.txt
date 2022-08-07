@@ -1,0 +1,12 @@
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\bin\Debug\net5.0\BN.Application.Contract.deps.json
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\bin\Debug\net5.0\BN.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\bin\Debug\net5.0\ref\BN.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\bin\Debug\net5.0\BN.Application.Contract.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.csproj.AssemblyReference.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.AssemblyInfoInputs.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.AssemblyInfo.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.csproj.CoreCompileInputs.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\ref\BN.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Application.Contract\obj\Debug\net5.0\BN.Application.Contract.pdb
