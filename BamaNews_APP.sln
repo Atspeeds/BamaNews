@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BN.Application", "BN.Applic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastrure", "Infrastrure", "{8EC71AD2-770F-4361-BA1E-98FD559802D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BN.Infrastrure.EFCore", "BN.Infrastrure.EFCore\BN.Infrastrure.EFCore.csproj", "{5A09F42D-8A57-4A27-9019-F812DE562FE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BN.Infrastrure.EFCore", "BN.Infrastrure.EFCore\BN.Infrastrure.EFCore.csproj", "{5A09F42D-8A57-4A27-9019-F812DE562FE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BamaNews.Presentation.MvcCore", "BamaNews.Presentation.MvcCore\BamaNews.Presentation.MvcCore.csproj", "{73D029BB-9F4E-4C26-87CE-E5C0AD5BEA8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BamaNews.Presentation.MvcCore", "BamaNews.Presentation.MvcCore\BamaNews.Presentation.MvcCore.csproj", "{73D029BB-9F4E-4C26-87CE-E5C0AD5BEA8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BN.Infrastrure.Core", "BN.Infrastrure.Core\BN.Infrastrure.Core.csproj", "{9B047A9F-D45B-45B4-ADF9-56FB7A830060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BN.Infrastrure.Core", "BN.Infrastrure.Core\BN.Infrastrure.Core.csproj", "{9B047A9F-D45B-45B4-ADF9-56FB7A830060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

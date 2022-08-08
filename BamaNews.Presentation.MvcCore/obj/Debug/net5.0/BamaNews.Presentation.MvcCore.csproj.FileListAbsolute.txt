@@ -79,3 +79,16 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debu
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\BN.Infrastrure.EFCore.pdb
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Humanizer.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Error.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Index.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Privacy.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\_Modal.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\_ViewImports.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\_ViewStart.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_Footer.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_Header.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_JavaScript.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_Style.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_TopBar.cshtml.g.cs

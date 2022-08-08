@@ -15,4 +15,8 @@
     <ProjectReference Include="..\BN.Infrastrure.Core\BN.Infrastrure.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\AdminAssets\assets\plugins\jstree\themes\default\" />
+  </ItemGroup>
+
 </Project>
