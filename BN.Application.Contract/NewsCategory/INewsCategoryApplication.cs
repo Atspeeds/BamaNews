@@ -5,7 +5,9 @@ namespace BN.Application.Contract.NewsCategory
 {
     public interface INewsCategoryApplication
     {
-        List<NewsCategoryViewModel> SelectAll();
-
+        List<NewsCategoryViewModel> SelectAllNewsCategory();
+        void ActivateNewsCategory(int id);
+        void InActivateNewsCategory(int id);
+        bool EditNewsCategory(NewsCategoryEditViewModel command);
     }
 }

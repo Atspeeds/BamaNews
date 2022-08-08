@@ -21,12 +21,12 @@ namespace BN.Infrastrure.EFCore.Repository.NewsCategoryRepos
 
         public NewsCategory Row(int id)
         {
-            throw new System.NotImplementedException();
+            return _Context.NewsCategories.FirstOrDefault(x=>x.CategoryId==id);
         }
 
         public void Save()
         {
-            throw new System.NotImplementedException();
+            _Context.SaveChanges();
         }
     }
 }
