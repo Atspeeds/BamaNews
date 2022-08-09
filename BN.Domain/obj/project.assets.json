@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "BN.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BN.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BN.Application.Contract.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BN.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BN.Application.Contract/BN.Application.Contract.csproj",
+      "msbuildProject": "../BN.Application.Contract/BN.Application.Contract.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "BN.Application.Contract >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\AMIRPC\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj": {
+              "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

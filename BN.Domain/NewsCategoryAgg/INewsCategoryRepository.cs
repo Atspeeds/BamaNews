@@ -7,6 +7,7 @@ namespace BN.Domain.NewsCategoryAgg
     {
         List<NewsCategory> All();
         NewsCategory Row(int id);
+        void Add(NewsCategory command);
         void Save();
     }
 }

@@ -14,6 +14,12 @@ namespace BN.Infrastrure.EFCore.Repository.NewsCategoryRepos
             _Context = context;
         }
 
+        public void Add(NewsCategory command)
+        {
+            _Context.Add(command);
+            _Context.SaveChanges();
+        }
+
         public List<NewsCategory> All()
         {
             return _Context.NewsCategories.AsNoTracking().ToList();

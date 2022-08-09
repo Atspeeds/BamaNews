@@ -227,7 +227,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

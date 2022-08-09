@@ -16,3 +16,5 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.EFCore\obj\Debug\net5.0
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.EFCore\obj\Debug\net5.0\ref\BN.Infrastrure.EFCore.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.EFCore\obj\Debug\net5.0\BN.Infrastrure.EFCore.pdb
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.EFCore\obj\Debug\net5.0\BN.Infrastrure.EFCore.genruntimeconfig.cache
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.EFCore\bin\Debug\net5.0\BN.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.EFCore\bin\Debug\net5.0\BN.Application.Contract.pdb

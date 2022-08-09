@@ -16,6 +16,12 @@ namespace BN.Infrastrure.EFCore.Mapping
             builder.Property(x => x.Description)
                 .HasMaxLength(500).IsRequired();
 
+
+            //Relation Ship To NewsCategory
+            builder.HasMany(x => x.News)
+                .WithOne(z => z.NewsCategory).HasForeignKey(y => y.NewsCategoryId);
+
+
         }
     }
 }

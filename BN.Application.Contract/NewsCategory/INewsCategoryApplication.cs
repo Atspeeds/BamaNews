@@ -9,5 +9,6 @@ namespace BN.Application.Contract.NewsCategory
         void ActivateNewsCategory(int id);
         void InActivateNewsCategory(int id);
         bool EditNewsCategory(NewsCategoryEditViewModel command);
+        bool AddNewsCategory(CreateNewCategoryViewModel command);
     }
 }
