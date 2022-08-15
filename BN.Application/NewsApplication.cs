@@ -13,6 +13,13 @@ namespace BN.Application
             _NewsRepository = newsRepository;
         }
 
+        public void Active(int id)
+        {
+            var news = _NewsRepository.SelectRow(id);
+            news.Active();
+            _NewsRepository.Save();
+        }
+
         public void AddNews(CreateNewsViewModel command)
         {
             var news = new News(command.Title,command.Image,command.ShortDescription,
@@ -25,6 +32,13 @@ namespace BN.Application
             var news = _NewsRepository.SelectRow(command.Id);
             news.Edit(command.Title,command.Image,command.ShortDescription,
                 command.Content,command.NewsCategoryId);
+            _NewsRepository.Save();
+        }
+
+        public void InActive(int id)
+        {
+            var news = _NewsRepository.SelectRow(id);
+            news.InActive();
             _NewsRepository.Save();
         }
 

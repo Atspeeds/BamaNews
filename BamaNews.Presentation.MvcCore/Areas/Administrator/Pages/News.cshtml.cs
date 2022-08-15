@@ -32,5 +32,17 @@ namespace BamaNews.Presentation.MvcCore.Areas.Administrator.Pages
             _NewsApplication.EditNews(model);
             return RedirectToPage("Index");
         }
+        public IActionResult OnPostActiveNews(int id)
+        {
+            _NewsApplication.Active(id);
+            return RedirectToPage("Index");
+        }
+
+        public IActionResult OnPostRemoveNews(int id)
+        {
+            _NewsApplication.InActive(id);
+            return RedirectToPage("Index");
+        }
+
     }
 }
