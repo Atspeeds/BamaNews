@@ -1,0 +1,182 @@
+﻿@using BN.Application.Contract.News
+@using BN.Application.Contract.NewsCategory
+@inject INewsCategoryApplication _NewsCategory
+@model IEnumerable<NewsViewModel>
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">افزودن خبر</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page="News" asp-page-handler="CreateNews">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">موضوع خبر :</label>
+                        <input type="text" name="Title" class="form-control" id="Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">محتوای خبر :</label>
+                        <input type="text" name="Content" class="form-control" id="Content">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">عکس خبر :</label>
+                        <input type="text" name="Image" class="form-control" id="Image">
+                    </div>
+                    <div class="form-group">
+                        <select name="NewsCategoryId" id="NewsCategoryId" class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
+                            <option selected>گروهی را انتخاب کنید</option>
+                            @foreach (var item in _NewsCategory.SelectAllNewsCategory().Select(x => new { x.Id, x.Name }))
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">توضیحات خبر :</label>
+                        <textarea name="ShortDescription" class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                        <button type="submit" class="btn btn-primary">ثبت خبر</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="m-b-30">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@@mdo">افزودن خبر</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editable-responsive">
+                    <div id="datatable-editable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="col-sm-12">
+                            <table class="table table-striped dataTable no-footer" id="datatable-editable" role="grid" aria-describedby="datatable-editable_info">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="موتور جستجو: activate to sort column descending" style="width: 148px;">
+                                            شناسه خبر
+                                        </th>
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="موتور جستجو: activate to sort column descending" style="width: 148px;">
+                                            نام خبر
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" aria-label="مرورگر: activate to sort column ascending" style="width: 313px;">
+                                            عکس خبر
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-editable" rowspan="1" colspan="1" aria-label="سیستن عامل: activate to sort column ascending" style="width: 190px;">
+                                            گروه خبر
+                                        </th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="فعالیت" style="width: 92px;">
+                                            تاریخ
+                                        </th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="فعالیت" style="width: 92px;">
+                                            وضعیت
+                                        </th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="فعالیت" style="width: 92px;">
+                                            جعبه ابزار
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr class="gradeX odd" role="row">
+                                        <td class="sorting_1">
+                                            @item.Id
+                                        </td>
+                                        <td class="sorting_1">
+                                            @item.Title
+                                        </td>
+                                        <td>
+                                            @item.Image
+                                        </td>
+                                        <td>
+                                            @item.NewsCategory
+                                        </td>
+                                        <td>
+                                            @item.CreationDate
+                                        </td>
+                                        @if (item.IsDeleted)
+                                        {
+                                            <td><span class="label label-danger">غیر فعال</span></td>
+
+                                            <td>
+                                                <form method="post" asp-page="NewsCategory" asp-page-handler="ActiveNewsCategory">
+                                                    <button type="submit" class="btn btn-block btn-icon waves-effect waves-light btn-success m-b-5">  <i class="fa fa-thumbs-o-up"></i> فعال کردن </button>
+                                                    <input type="hidden" name="id" value="@item.Id" />
+                                                </form>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td><span class="label label-success">فعال</span></td>
+
+                                            <td>
+                                                <form method="post" asp-page="NewsCategory" asp-page-handler="RemoveNewsCategory">
+                                                    <button type="submit" class="btn btn-block btn-icon waves-effect waves-light btn-danger m-b-5"> <i class="fa fa-remove"></i>  غیر فعال کردن </button>
+                                                    <input type="hidden" name="id" value="@item.Id" />
+                                                </form>
+                                            </td>
+                                        }
+                                        <td class="actions">
+                                            <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                            <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
+                                            <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="dataTables_info" id="datatable-editable_info" role="status" aria-live="polite">
+                                لیست خبر ها
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="dataTables_paginate paging_simple_numbers" id="datatable-editable_paginate">
+                                <ul class="pagination">
+
+                                    <li class="paginate_button active" aria-controls="datatable-editable" tabindex="0"><a href="#">1</a></li>
+                                    <li class="paginate_button " aria-controls="datatable-editable" tabindex="0"><a href="#">2</a></li>
+                                    <li class="paginate_button " aria-controls="datatable-editable" tabindex="0"><a href="#">3</a></li>
+                                    <li class="paginate_button " aria-controls="datatable-editable" tabindex="0"><a href="#">4</a></li>
+                                    <li class="paginate_button " aria-controls="datatable-editable" tabindex="0"><a href="#">5</a></li>
+                                    <li class="paginate_button disabled" aria-controls="datatable-editable" tabindex="0" id="datatable-editable_ellipsis"><a href="#">…</a></li>
+                                    <li class="paginate_button " aria-controls="datatable-editable" tabindex="0"><a href="#">8</a></li>
+                                    <li class="paginate_button next" aria-controls="datatable-editable" tabindex="0" id="datatable-editable_next"><a href="#">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: panel body -->
+
+    </div> <!-- end panel -->
+</div> <!-- end col-->
+</div>

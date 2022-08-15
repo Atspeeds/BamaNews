@@ -94,3 +94,5 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debu
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_TopBar.cshtml.g.cs
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\Components\NewsCategoryAll\Default.cshtml.g.cs
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\NewsCategory.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\Components\NewsAll\Default.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\News.cshtml.g.cs

@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="content">
+    <div class="container">
+        <!-- start row AllNewsCategory -->
+        @await Component.InvokeAsync("NewsCategoryAll")
+        <!-- end row -->
+
+        <!-- start row News -->
+        @await Component.InvokeAsync("NewsAll")
+        <!-- End row News -->
+
+    </div> 
+    <!-- container -->
+
+</div>

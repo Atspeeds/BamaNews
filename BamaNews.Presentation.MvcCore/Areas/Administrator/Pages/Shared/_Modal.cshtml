@@ -1,0 +1,53 @@
+﻿
+<!-- Modal Add Category -->
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <form method="post" asp-page="NewsCategory" asp-page-handler="AddNewsCategory">
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">نام دسته :</label>
+                    <input type="text" placeholder="نام دسته را وارد کنید" name="Name" id="txtname" />
+                    <br />
+                    <label for="recipient-name" class="col-form-label">توضیحات محصول :</label>
+                    <br />
+                    <textarea  name="Description" placeholder="توضیحات محصول :"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                    <button type="submit" class="btn btn-primary">ثبت</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Edit Category -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form method="post" asp-page="NewsCategory" asp-page-handler="EditNewsCategory">
+                <div class="form-group">
+                    <input id="txtid" value="" type="hidden" name="id" />
+                    <label  for="recipient-name" class="col-form-label">نام دسته :</label>
+                    <input id="tagEntry1" type="text" placeholder="نام دسته را وارد کنید" name="Name" />
+                    <br />
+                    <label for="recipient-name" class="col-form-label">توضیحات محصول :</label>
+                    <br />
+                    <textarea id="tagEntry2" name="Description" placeholder="توضیحات محصول :"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                    <button type="submit" class="btn btn-primary">ثبت</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
