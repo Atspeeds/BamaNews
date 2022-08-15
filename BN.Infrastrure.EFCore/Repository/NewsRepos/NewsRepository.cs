@@ -28,7 +28,9 @@ namespace BN.Infrastrure.EFCore.Repository.NewsRepos
                       Image = x.NewsImage,
                       IsDeleted = x.IsDeleted,
                       NewsCategory = x.NewsCategory.CategoryName,
-                      CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture)
+                      CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
+                      ShortDescription=x.NewsShortDescription,
+                      Content=x.NewsContent
 
                   }).AsNoTracking().ToList();
         }
@@ -43,5 +45,11 @@ namespace BN.Infrastrure.EFCore.Repository.NewsRepos
         {
             _Context.SaveChanges();
         }
+
+        public News SelectRow(int id)
+        {
+            return _Context.News.FirstOrDefault(x => x.NewsId == id);
+        }
+
     }
 }

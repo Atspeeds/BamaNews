@@ -8,5 +8,6 @@ namespace BN.Domain.NewsAgg
         List<NewsViewModel> All();
         void Create(News command);
         void Save();
+        News SelectRow(int id);
     }
 }

@@ -6,6 +6,7 @@ namespace BN.Application.Contract.News
     {
         IList<NewsViewModel> SelectAllNews();
         void AddNews(CreateNewsViewModel command);
+        void EditNews(EditNewsViewModel command);
 
     }
 }

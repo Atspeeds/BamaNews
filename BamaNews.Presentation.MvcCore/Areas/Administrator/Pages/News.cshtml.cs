@@ -27,5 +27,10 @@ namespace BamaNews.Presentation.MvcCore.Areas.Administrator.Pages
             return RedirectToPage("Index");
         }
 
+        public IActionResult OnPostEditNews(EditNewsViewModel model)
+        {
+            _NewsApplication.EditNews(model);
+            return RedirectToPage("Index");
+        }
     }
 }

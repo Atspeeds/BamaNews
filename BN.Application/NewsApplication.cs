@@ -20,10 +20,19 @@ namespace BN.Application
             _NewsRepository.Create(news);
         }
 
+        public void EditNews(EditNewsViewModel command)
+        {
+            var news = _NewsRepository.SelectRow(command.Id);
+            news.Edit(command.Title,command.Image,command.ShortDescription,
+                command.Content,command.NewsCategoryId);
+            _NewsRepository.Save();
+        }
+
         public IList<NewsViewModel> SelectAllNews()
         {
             return _NewsRepository.All();
         }
+
 
     }
 }

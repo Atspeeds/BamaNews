@@ -1,0 +1,110 @@
+﻿@using BN.Application.Contract.NewsCategory
+@inject INewsCategoryApplication _NewsCategory
+    <!-- Add News modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">افزودن خبر</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form method="post" asp-page="News" asp-page-handler="CreateNews">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">موضوع خبر :</label>
+                        <input type="text" name="Title" class="form-control" id="Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">محتوای خبر :</label>
+                        <input type="text" name="Content" class="form-control" id="Content">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">عکس خبر :</label>
+                        <input type="text" name="Image" class="form-control" id="Image">
+                    </div>
+                    <div class="form-group">
+                        <select name="NewsCategoryId" id="NewsCategoryId" class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
+                            <option selected>گروهی را انتخاب کنید</option>
+                            @foreach (var item in _NewsCategory.SelectAllNewsCategory().Select(x => new { x.Id, x.Name }))
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">توضیحات خبر :</label>
+                        <textarea name="ShortDescription" class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                        <button type="submit" class="btn btn-primary">ثبت خبر</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Add News modal -->
+<!-- Edit News modal -->
+<!-- Large modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">ویرایش خبر</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page="News" asp-page-handler="EditNews">
+
+                    <div class="form-group">
+                        <input id="newsid" type="hidden" name="Id" />
+                        <label for="recipient-name" class="col-form-label">موضوع خبر :</label>
+                        <input type="text" name="Title" class="form-control" id="newstitle">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">محتوای خبر :</label>
+                        <input type="text" name="Content" class="form-control" id="newscontent">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">عکس خبر :</label>
+                        <input type="text" name="Image" class="form-control" id="newsimage">
+                    </div>
+
+                    <div class="form-group">
+                        <input  id="newscategory" type="text" disabled>
+                        <select name="NewsCategoryId" class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
+
+                            <option selected>انتخاب کنید</option>
+                            @foreach (var item in _NewsCategory.SelectAllNewsCategory().Select(x => new { x.Id, x.Name }))
+                            {
+                            <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">توضیحات خبر :</label>
+                        <textarea name="ShortDescription" class="form-control" id="newsdescription"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                        <button type="submit" class="btn btn-primary">ثبت</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,58 +1,13 @@
 ﻿@using BN.Application.Contract.News
-@using BN.Application.Contract.NewsCategory
-@inject INewsCategoryApplication _NewsCategory
 @model IEnumerable<NewsViewModel>
 
 
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">افزودن خبر</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form method="post" asp-page="News" asp-page-handler="CreateNews">
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">موضوع خبر :</label>
-                        <input type="text" name="Title" class="form-control" id="Title">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">محتوای خبر :</label>
-                        <input type="text" name="Content" class="form-control" id="Content">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">عکس خبر :</label>
-                        <input type="text" name="Image" class="form-control" id="Image">
-                    </div>
-                    <div class="form-group">
-                        <select name="NewsCategoryId" id="NewsCategoryId" class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
-                            <option selected>گروهی را انتخاب کنید</option>
-                            @foreach (var item in _NewsCategory.SelectAllNewsCategory().Select(x => new { x.Id, x.Name }))
-                            {
-                                <option value="@item.Id">@item.Name</option>
-                            }
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">توضیحات خبر :</label>
-                        <textarea name="ShortDescription" class="form-control" id="message-text"></textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
-                        <button type="submit" class="btn btn-primary">ثبت خبر</button>
-                    </div>
-                </form>
-            </div>
 
-        </div>
-    </div>
-</div>
+@await Html.PartialAsync("_ModalNews")
+
 
 <div class="row">
     <div class="col-sm-12">
@@ -98,50 +53,52 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                    <tr class="gradeX odd" role="row">
-                                        <td class="sorting_1">
-                                            @item.Id
-                                        </td>
-                                        <td class="sorting_1">
-                                            @item.Title
-                                        </td>
-                                        <td>
-                                            @item.Image
-                                        </td>
-                                        <td>
-                                            @item.NewsCategory
-                                        </td>
-                                        <td>
-                                            @item.CreationDate
-                                        </td>
-                                        @if (item.IsDeleted)
-                                        {
-                                            <td><span class="label label-danger">غیر فعال</span></td>
-
-                                            <td>
-                                                <form method="post" asp-page="NewsCategory" asp-page-handler="ActiveNewsCategory">
-                                                    <button type="submit" class="btn btn-block btn-icon waves-effect waves-light btn-success m-b-5">  <i class="fa fa-thumbs-o-up"></i> فعال کردن </button>
-                                                    <input type="hidden" name="id" value="@item.Id" />
-                                                </form>
+                                        <tr class="gradeX odd" role="row">
+                                            <td class="sorting_1">
+                                                @item.Id
                                             </td>
-                                        }
-                                        else
-                                        {
-                                            <td><span class="label label-success">فعال</span></td>
-
-                                            <td>
-                                                <form method="post" asp-page="NewsCategory" asp-page-handler="RemoveNewsCategory">
-                                                    <button type="submit" class="btn btn-block btn-icon waves-effect waves-light btn-danger m-b-5"> <i class="fa fa-remove"></i>  غیر فعال کردن </button>
-                                                    <input type="hidden" name="id" value="@item.Id" />
-                                                </form>
+                                            <td class="sorting_1">
+                                                @item.Title
                                             </td>
-                                        }
+                                            <td>
+                                                @item.Image
+                                            </td>
+                                            <td>
+                                                @item.NewsCategory
+                                            </td>
+                                            <td>
+                                                @item.CreationDate
+                                            </td>
+                                            @if (item.IsDeleted)
+                                            {
+                                                <td><span class="label label-danger">غیر فعال</span></td>
+
+                                                <td>
+                                                    <form method="post" asp-page="NewsCategory" asp-page-handler="ActiveNewsCategory">
+                                                        <button type="submit" class="btn btn-block btn-icon waves-effect waves-light btn-success m-b-5">  <i class="fa fa-thumbs-o-up"></i> فعال کردن </button>
+                                                        <input type="hidden" name="id" value="@item.Id" />
+                                                    </form>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td><span class="label label-success">فعال</span></td>
+
+                                                <td>
+                                                    <form method="post" asp-page="NewsCategory" asp-page-handler="RemoveNewsCategory">
+                                                        <button type="submit" class="btn btn-block btn-icon waves-effect waves-light btn-danger m-b-5"> <i class="fa fa-remove"></i>  غیر فعال کردن </button>
+                                                        <input type="hidden" name="id" value="@item.Id" />
+                                                    </form>
+                                                </td>
+                                            }
                                         <td class="actions">
                                             <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
                                             <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
-                                            <a href="#" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                                            <!-- edit Button trigger modal -->
+                                            <button type="button" onclick="FunctionEditNews('@item.Id', '@item.Title', '@item.Content', '@item.Image', '@item.NewsCategory', '@item.ShortDescription')" href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-pencil"></i></button>
+
                                         </td>
-                                    </tr>
+                                        </tr>
 
                                     }
 
@@ -179,4 +136,14 @@
 
     </div> <!-- end panel -->
 </div> <!-- end col-->
-</div>
+<!-- Send the parameter to the edit modal -->
+<script>
+    function FunctionEditNews(id, Title,content,image,category,shortdescription) {
+        $('#newsid').val(id);
+        $('#newstitle').val(Title);
+        $('#newscontent').val(content);
+        $('#newsimage').val(image);
+        $('#newscategory').val(category);
+        $('#newsdescription').val(shortdescription);
+    }
+</script>

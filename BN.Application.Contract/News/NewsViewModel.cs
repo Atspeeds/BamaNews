@@ -8,6 +8,7 @@
         public string NewsCategory { get; set; }
         public bool IsDeleted { get; set; }
         public string CreationDate { get; set; }
-
+        public string ShortDescription { get; set; }
+        public string Content { get; set; }
     }
 }
