@@ -1,0 +1,14 @@
+﻿@using BN.Infrastrure.Query.ViewModels
+@model IEnumerable<NewsView>
+
+<div class="section pb-6">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <partial name="_News" model="item"/>
+            }
+
+        </div>
+    </div>
+</div>

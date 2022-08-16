@@ -13,6 +13,7 @@
     <ProjectReference Include="..\BN.Application.Contract\BN.Application.Contract.csproj" />
     <ProjectReference Include="..\BN.Application\BN.Application.csproj" />
     <ProjectReference Include="..\BN.Infrastrure.EFCore\BN.Infrastrure.EFCore.csproj" />
+    <ProjectReference Include="..\BN.Infrastrure.Query\BN.Infrastrure.Query.csproj" />
   </ItemGroup>
 
 </Project>

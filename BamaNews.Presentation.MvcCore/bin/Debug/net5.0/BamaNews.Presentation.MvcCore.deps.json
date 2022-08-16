@@ -34,6 +34,7 @@
       "BamaNews.Presentation.MvcCore/1.0.0": {
         "dependencies": {
           "BN.Infrastrure.Core": "1.0.0",
+          "BN.Infrastrure.Query": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -1347,6 +1348,7 @@
           "BN.Application": "1.0.0",
           "BN.Application.Contract": "1.0.0",
           "BN.Infrastrure.EFCore": "1.0.0",
+          "BN.Infrastrure.Query": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
@@ -1368,6 +1370,26 @@
         },
         "compile": {
           "BN.Infrastrure.EFCore.dll": {}
+        }
+      },
+      "BN.Infrastrure.Query/1.0.0": {
+        "dependencies": {
+          "BN.Infrastrure.EFCore": "1.0.0",
+          "FrameWork": "1.0.0"
+        },
+        "runtime": {
+          "BN.Infrastrure.Query.dll": {}
+        },
+        "compile": {
+          "BN.Infrastrure.Query.dll": {}
+        }
+      },
+      "FrameWork/1.0.0": {
+        "runtime": {
+          "FrameWork.dll": {}
+        },
+        "compile": {
+          "FrameWork.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3763,6 +3785,16 @@
       "sha512": ""
     },
     "BN.Infrastrure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BN.Infrastrure.Query/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FrameWork/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

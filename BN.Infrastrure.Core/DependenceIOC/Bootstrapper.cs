@@ -7,6 +7,7 @@ using BN.Domain.NewsCategoryAgg;
 using BN.Infrastrure.EFCore;
 using BN.Infrastrure.EFCore.Repository.NewsCategoryRepos;
 using BN.Infrastrure.EFCore.Repository.NewsRepos;
+using BN.Infrastrure.Query.NewsQuerys;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,6 +25,8 @@ namespace BN.Infrastrure.Core.DependenceIOC
             services.AddTransient<INewsApplication, NewsApplication>();
 
             services.AddTransient<INewsRepository, NewsRepository>();
+
+            services.AddTransient<INewsQuery, NewsQuery>();
 
             //Send options To Base Class And Use Sql Server
             services.AddDbContext<BamaNewsContext>(options =>

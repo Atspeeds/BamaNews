@@ -1,0 +1,37 @@
+﻿@using BN.Infrastrure.Query.ViewModels
+@model NewsView
+
+<div class="col-lg-4 col-md-6">
+    <div class="blog-item style-1">
+        <div class="post-wrapper">
+            <div class="post-thumbnail">
+                <a href="blog-detail.html">
+                    <img src="/images/blog/@(Model.Image)" alt="" />
+                </a>
+            </div>
+            <div class="post-info">
+                <div class="post-categories">
+                    <a href="#" class="bg-red">@Model.Content</a>
+                    <a href="#" class="bg-emerald">@Model.NewsCategory</a>
+                </div>
+                <h3 class="post-title">
+                    <a href="blog-detail.html">@Model.Title</a>
+                </h3>
+                <div class="post-meta">
+                    <div class="post-view meta-item">
+                        <i class="ion-eye"></i>
+                        32 مشاهده
+                    </div>
+                    <div class="post-likes meta-item">
+                        <i class="ion-android-favorite-outline"></i>
+                        3 لایک
+                    </div>
+                    <div class="post-author-meta meta-item">
+                        <i class="ion-ios-person"></i>
+                        آرش خادملو
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

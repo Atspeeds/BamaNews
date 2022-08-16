@@ -1536,6 +1536,30 @@
         "runtime": {
           "bin/placeholder/BN.Infrastrure.EFCore.dll": {}
         }
+      },
+      "BN.Infrastrure.Query/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BN.Infrastrure.EFCore": "1.0.0",
+          "FrameWork": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BN.Infrastrure.Query.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BN.Infrastrure.Query.dll": {}
+        }
+      },
+      "FrameWork/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FrameWork.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrameWork.dll": {}
+        }
       }
     }
   },
@@ -5773,6 +5797,16 @@
       "type": "project",
       "path": "../BN.Infrastrure.EFCore/BN.Infrastrure.EFCore.csproj",
       "msbuildProject": "../BN.Infrastrure.EFCore/BN.Infrastrure.EFCore.csproj"
+    },
+    "BN.Infrastrure.Query/1.0.0": {
+      "type": "project",
+      "path": "../BN.Infrastrure.Query/BN.Infrastrure.Query.csproj",
+      "msbuildProject": "../BN.Infrastrure.Query/BN.Infrastrure.Query.csproj"
+    },
+    "FrameWork/1.0.0": {
+      "type": "project",
+      "path": "../FrameWork/FrameWork.csproj",
+      "msbuildProject": "../FrameWork/FrameWork.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5780,6 +5814,7 @@
       "BN.Application >= 1.0.0",
       "BN.Application.Contract >= 1.0.0",
       "BN.Infrastrure.EFCore >= 1.0.0",
+      "BN.Infrastrure.Query >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0"
     ]
@@ -5824,6 +5859,9 @@
             },
             "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Infrastrure.EFCore\\BN.Infrastrure.EFCore.csproj": {
               "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Infrastrure.EFCore\\BN.Infrastrure.EFCore.csproj"
+            },
+            "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Infrastrure.Query\\BN.Infrastrure.Query.csproj": {
+              "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Infrastrure.Query\\BN.Infrastrure.Query.csproj"
             }
           }
         }

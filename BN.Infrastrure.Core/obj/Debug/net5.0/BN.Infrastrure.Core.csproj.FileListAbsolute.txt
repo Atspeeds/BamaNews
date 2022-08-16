@@ -19,3 +19,7 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\obj\Debug\net5.0\B
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\obj\Debug\net5.0\BN.Infrastrure.Core.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\obj\Debug\net5.0\ref\BN.Infrastrure.Core.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\obj\Debug\net5.0\BN.Infrastrure.Core.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\bin\Debug\net5.0\BN.Infrastrure.Query.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\bin\Debug\net5.0\FrameWork.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\bin\Debug\net5.0\BN.Infrastrure.Query.pdb
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Infrastrure.Core\bin\Debug\net5.0\FrameWork.pdb

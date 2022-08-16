@@ -11,6 +11,7 @@
           "BN.Application": "1.0.0",
           "BN.Application.Contract": "1.0.0",
           "BN.Infrastrure.EFCore": "1.0.0",
+          "BN.Infrastrure.Query": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
@@ -1067,6 +1068,20 @@
         "runtime": {
           "BN.Infrastrure.EFCore.dll": {}
         }
+      },
+      "BN.Infrastrure.Query/1.0.0": {
+        "dependencies": {
+          "BN.Infrastrure.EFCore": "1.0.0",
+          "FrameWork": "1.0.0"
+        },
+        "runtime": {
+          "BN.Infrastrure.Query.dll": {}
+        }
+      },
+      "FrameWork/1.0.0": {
+        "runtime": {
+          "FrameWork.dll": {}
+        }
       }
     }
   },
@@ -1750,6 +1765,16 @@
       "sha512": ""
     },
     "BN.Infrastrure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BN.Infrastrure.Query/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FrameWork/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

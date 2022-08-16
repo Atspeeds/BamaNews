@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\News.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -13,10 +17,23 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BN.Infrastrure.Core\BN.Infrastrure.Core.csproj" />
+    <ProjectReference Include="..\BN.Infrastrure.Query\BN.Infrastrure.Query.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\AdminAssets\assets\plugins\jstree\themes\default\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\News.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\News.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\News.cshtml" />
   </ItemGroup>
 
 </Project>

@@ -91,13 +91,13 @@
                                                     </form>
                                                 </td>
                                             }
-                                        <td class="actions">
-                                            <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
-                                            <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
-                                            <!-- edit Button trigger modal -->
-                                            <button type="button" onclick="FunctionEditNews('@item.Id', '@item.Title', '@item.Content', '@item.Image', '@item.NewsCategory', '@item.ShortDescription')" href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-pencil"></i></button>
+                                            <td class="actions">
+                                                <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                                <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
+                                                <!-- edit Button trigger modal -->
+                                                <button type="button" onclick="FunctionEditNews('@item.Id', '@item.Title', '@item.Content', '@item.Image', '@item.NewsCategory', '@item.ShortDescription')" href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-pencil"></i></button>
 
-                                        </td>
+                                            </td>
                                         </tr>
 
                                     }
@@ -138,7 +138,7 @@
 </div> <!-- end col-->
 <!-- Send the parameter to the edit modal -->
 <script>
-    function FunctionEditNews(id, Title,content,image,category,shortdescription) {
+    function FunctionEditNews(id, Title, content, image, category, shortdescription) {
         $('#newsid').val(id);
         $('#newstitle').val(Title);
         $('#newscontent').val(content);
