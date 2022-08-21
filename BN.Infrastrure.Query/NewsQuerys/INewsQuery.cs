@@ -9,6 +9,7 @@ namespace BN.Infrastrure.Query.NewsQuerys
     {
         List<NewsView> GetAll();
         List<NewsView> GetNewest();
+        NewsView SelectRow(int id);
 
     }
 }

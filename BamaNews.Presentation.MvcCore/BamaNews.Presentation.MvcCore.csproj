@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\News.cshtml" />
+    <Content Remove="Pages\NewsDetail.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,15 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\News.cshtml" />
+    <UpToDateCheckInput Remove="Pages\NewsDetail.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\News.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\NewsDetail.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Pages\News.cshtml" />
+    <None Include="Pages\NewsDetail.cshtml" />
   </ItemGroup>
 
 </Project>

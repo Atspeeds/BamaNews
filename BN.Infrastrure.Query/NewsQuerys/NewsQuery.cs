@@ -52,5 +52,21 @@ namespace BN.Infrastrure.Query.NewsQuerys
 
         }
 
+        public NewsView SelectRow(int id)
+        {
+            var result = _Context.News.Include(c=>c.NewsCategory)
+                .SingleOrDefault(x => x.NewsId == id);
+                
+            return new NewsView()
+            {
+                Id=result.NewsId,
+                Title=result.NewsTitle,
+                Content=result.NewsContent,
+                CreationDate=result.CreationDate.Toshamsi(),
+                Image=result.NewsImage,
+                ShortDescription=result.NewsShortDescription,
+                NewsCategory=result.NewsCategory.CategoryName
+            };
+        }
     }
 }

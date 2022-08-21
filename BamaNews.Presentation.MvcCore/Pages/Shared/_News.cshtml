@@ -5,7 +5,7 @@
     <div class="blog-item style-1">
         <div class="post-wrapper">
             <div class="post-thumbnail">
-                <a href="blog-detail.html">
+                <a  asp-page="Detail" asp-route-id="@Model.Id">
                     <img src="/images/blog/@(Model.Image)" alt="" />
                 </a>
             </div>
@@ -15,7 +15,7 @@
                     <a href="#" class="bg-emerald">@Model.NewsCategory</a>
                 </div>
                 <h3 class="post-title">
-                    <a href="blog-detail.html">@Model.Title</a>
+                    <a asp-page="Detail" asp-route-id="@Model.Id">@Model.Title</a>
                 </h3>
                 <div class="post-meta">
                     <div class="post-view meta-item">

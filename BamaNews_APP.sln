@@ -21,11 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BamaNews.Presentation.MvcCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BN.Infrastrure.Core", "BN.Infrastrure.Core\BN.Infrastrure.Core.csproj", "{9B047A9F-D45B-45B4-ADF9-56FB7A830060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BN.Infrastrure.Query", "BN.Infrastrure.Query\BN.Infrastrure.Query.csproj", "{D613A0CF-9152-496C-A3BF-45D7B9ECB15D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BN.Infrastrure.Query", "BN.Infrastrure.Query\BN.Infrastrure.Query.csproj", "{D613A0CF-9152-496C-A3BF-45D7B9ECB15D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{CA393422-7E6B-4EA3-8B7A-A3C7CA7DD9A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameWork", "FrameWork\FrameWork.csproj", "{DA1D7580-7AA4-4DD0-832D-4A1E9E6C9075}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameWork", "FrameWork\FrameWork.csproj", "{DA1D7580-7AA4-4DD0-832D-4A1E9E6C9075}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

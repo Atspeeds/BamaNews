@@ -1,0 +1,48 @@
+﻿@page
+@model BamaNews.Presentation.MvcCore.Pages.NewsAllModel
+@{
+}
+
+<br />
+<hr />
+
+<div class="section pb-6">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.NewsModels)
+            {
+                <partial name="_News" model="item" />
+            }
+
+        </div>
+    </div>
+</div>
+
+<div class="row pb-2">
+    <div class="col-lg-12">
+        <hr>
+        <div class="mb-2"></div>
+    </div>
+    <div class="col-md-6">
+        <p class="fz-14"> © 2019 <span class="color">آرش خادملو</span>. همه حقوق محفوظ است شرایط و حریم خصوصی.</p>
+    </div>
+    <div class="col-md-6">
+        <div class="footer-social-networks text-right text-center-xs">
+            <div class="inner">
+                <a class="hint--bounce hint--top" aria-label="Facebook" href="https://facebook.com/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="hint--bounce hint--top" aria-label="Twitter" href="https://twitter.com/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="hint--bounce hint--top" aria-label="Instagram" href="https://www.instagram.com/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a class="hint--bounce hint--top" aria-label="Dribbble" href="https://www.dribbble.com/" target="_blank">
+                    <i class="fa fa-dribbble"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
