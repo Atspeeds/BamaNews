@@ -1,5 +1,6 @@
 ﻿using BN.Domain.NewsAgg;
 using BN.Domain.NewsCategoryAgg;
+using BN.Domain.UserAgg;
 using BN.Infrastrure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ namespace BN.Infrastrure.EFCore
         #region Database Entities
         public DbSet<NewsCategory> NewsCategories { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<User> Users { get; set; }
         #endregion
 
 

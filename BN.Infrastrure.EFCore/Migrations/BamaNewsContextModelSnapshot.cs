@@ -85,6 +85,49 @@ namespace BN.Infrastrure.EFCore.Migrations
                     b.ToTable("NewsCategories");
                 });
 
+            modelBuilder.Entity("BN.Domain.UserAgg.User", b =>
+                {
+                    b.Property<int>("User_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Passwoard")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("UserAvatar")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
+
+                    b.Property<string>("UserRole")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("User_Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("BN.Domain.NewsAgg.News", b =>
                 {
                     b.HasOne("BN.Domain.NewsCategoryAgg.NewsCategory", "NewsCategory")
