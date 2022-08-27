@@ -14,6 +14,11 @@ namespace BN.Infrastrure.Query
                 pc.GetDayOfMonth(date)
                 );
         }
+
+        public static string FixText(this string fix)
+        {
+           return fix.Trim().ToLower();
+        }
        
     }
 }

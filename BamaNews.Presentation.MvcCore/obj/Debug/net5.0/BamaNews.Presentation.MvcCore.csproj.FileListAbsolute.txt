@@ -107,3 +107,15 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debu
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_News.cshtml.g.cs
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\NewsAll.cshtml.g.cs
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Detail.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\Components\UserAll\Default.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\_TitleBar.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\User.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

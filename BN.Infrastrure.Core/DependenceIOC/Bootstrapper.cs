@@ -11,6 +11,7 @@ using BN.Infrastrure.EFCore.Repository;
 using BN.Infrastrure.EFCore.Repository.NewsCategoryRepos;
 using BN.Infrastrure.EFCore.Repository.NewsRepos;
 using BN.Infrastrure.Query.NewsQuerys;
+using BN.Infrastrure.Query.UserQuerys;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -41,6 +42,7 @@ namespace BN.Infrastrure.Core.DependenceIOC
 
             #region Query View
             services.AddTransient<INewsQuery, NewsQuery>();
+            services.AddTransient<IUserQuery, UserQuery>();
             #endregion
 
 

@@ -1,14 +1,11 @@
 using BN.Infrastrure.Core.DependenceIOC;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BamaNews.Presentation.MvcCore
 {
@@ -26,6 +23,19 @@ namespace BamaNews.Presentation.MvcCore
         {
             services.AddRazorPages();
             Bootstrapper.Config(services, Configuration.GetConnectionString("BamaNewsDB"));
+
+            #region Authentication
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/User";
+                    option.LogoutPath = "/Logout";
+                    option.ExpireTimeSpan = TimeSpan.FromDays(10);
+                });
+
+            #endregion
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,8 +57,8 @@ namespace BamaNews.Presentation.MvcCore
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
