@@ -1,0 +1,48 @@
+﻿@page
+@model BamaNews.Presentation.MvcCore.Pages.RegisterModel
+@{
+    Layout = "_TitleBar";
+}
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <div id="main" style="margin-bottom: 466.172px;">
+        <div class="section pt-10 pb-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>ثبت نام</h2>
+                        <form class="commerce-form-login" method="post">
+                            <div class="form-item">
+                                <label for="username">نام کاربری <span class="required">*</span></label>
+                                <input name="UserName" type="text" id="validationCustom01" required @*asp-for="RegisterMD.UserName"*@ class="form-text form-control">
+                                @*<span asp-validation-for="RegisterMD.UserName" class="text-danger"></span>*@
+                            </div>
+                            <div class="form-item">
+                                <label for="Email">آدرس ایمیل<span class="required">*</span></label>
+                                <input name="Email" @*asp-for="RegisterMD.Email"*@ type="text" id="validationCustom01" required class="form-text form-control">
+                                <span @*asp-validation-for="RegisterMD.Email"*@ class="text-danger"></span>
+                            </div>
+                            <div class="form-item">
+                                <label for="password">رمزعبور <span class="required">*</span></label>
+                                <input name="password" @*asp-for="RegisterMD.Password"*@ type="text" id="validationCustom01" required class="form-text form-control">
+                                <span @*asp-validation-for="RegisterMD.password"*@ class="text-danger"></span>
+                            </div>
+                            <div class="form-item">
+                                <label for="RePassword">تکرار رمز عبور <span class="required">*</span></label>
+                                <input name="RePassword" @*asp-for="RegisterMD.RePassword"*@ type="text" id="validationCustom01" required class="form-text form-control">
+                                <span @*asp-validation-for="RegisterMD.RePassword"*@ class="text-danger"></span>
+                            </div>
+                            <div class="form-item">
+                                <button type="submit" class="button style-flat">ورود</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

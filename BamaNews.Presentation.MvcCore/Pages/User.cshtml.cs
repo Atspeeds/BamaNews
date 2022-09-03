@@ -1,5 +1,6 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Security.Claims;
+using System.Threading.Tasks;
 using BN.Infrastrure.Query;
 using BN.Infrastrure.Query.UserQuerys;
 using BN.Infrastrure.Query.ViewModels;
@@ -13,7 +14,7 @@ namespace BamaNews.Presentation.MvcCore.Pages
 {
     public class UserModel : PageModel
     {
-        
+
 
         private readonly IUserQuery _Query;
 
@@ -34,7 +35,10 @@ namespace BamaNews.Presentation.MvcCore.Pages
                 UserName = login.UserName,
                 Password = login.Password
             });
-
+            if (user == null)
+            {
+                return Redirect("/User");
+            }
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.User_Id.ToString()),
@@ -56,5 +60,12 @@ namespace BamaNews.Presentation.MvcCore.Pages
             return Redirect("/");
         }
 
+        public async Task<IActionResult> OnPostLogout()
+        {
+            await AuthenticationHttpContextExtensions.SignOutAsync(HttpContext, CookieAuthenticationDefaults.AuthenticationScheme);
+            return Redirect("/"); ;
+        }
+
+      
     }
 }

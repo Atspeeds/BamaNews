@@ -14,6 +14,26 @@ namespace BN.Infrastrure.Query.UserQuerys
         {
             _Context = Context;
         }
+
+        public bool AddUser(User command)
+        {
+            try
+            {
+                _Context.Users.Add(command);
+                Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public void Save()
+        {
+            _Context.SaveChanges();
+        }
+
         public User SelectUser(LoginView command)
         {
             var user = _Context.Users.SingleOrDefault(x => x.UserName == command.UserName &&

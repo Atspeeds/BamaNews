@@ -11,6 +11,7 @@ namespace BN.Infrastrure.Query.UserQuerys
     public interface IUserQuery
     {
         User SelectUser(LoginView command);
-
+        bool AddUser(User command);
+        void Save();
     }
 }

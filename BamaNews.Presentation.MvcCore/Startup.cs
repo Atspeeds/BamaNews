@@ -29,8 +29,8 @@ namespace BamaNews.Presentation.MvcCore
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(option =>
                 {
-                    option.LoginPath = "/User";
-                    option.LogoutPath = "/Logout";
+                    option.LoginPath = "/User/Login";
+                    option.LogoutPath = "/User/Logout";
                     option.ExpireTimeSpan = TimeSpan.FromDays(10);
                 });
 
