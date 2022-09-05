@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BN.Infrastrure.Query.ViewModels.CommentNewsView>
+
+<div id="comments" class="comments-area">
+    <h2 class="comments-title">
+        نظرات <span class="comment-count">(@Model.Count())</span>
+    </h2>
+    <div class="comment-list-wrap">
+        <ol class="comment-list">
+            <li class="comment">
+                <ol class="children">
+                    @foreach (var item in Model)
+                    {
+                    <li class="comment">
+                        <div class="comment-author vcard">
+                            <img alt="" src="/images/avatar/avatar_1.jpg" class="avatar" height="60" width="60">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h6>@item.UserName</h6>
+                                <div class="comment-datetime">@item.CreationDate</div>
+                            </div>
+                            <div class="comments-title">
+                                @item.Title
+                            </div>
+                            <div class="comment-text">
+                               @item.Message
+                            </div>
+                            <div class="comment-actions">
+                                <a class="comment-reply-link" href="#"><i class="ion-reply"></i>پاسخ</a>
+                            </div>
+                        </div>
+                    </li>
+                    }
+                       
+                </ol>
+            </li>
+        </ol>
+    </div>
+    
+</div>

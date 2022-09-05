@@ -44,6 +44,7 @@ namespace BamaNews.Presentation.MvcCore.Pages
                 new Claim(ClaimTypes.NameIdentifier, user.User_Id.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim("IsAdmin", user.IsAdmin.ToString()),
+                new Claim("UserId", user.User_Id.ToString()),
                 // new Claim("CodeMeli", user.Email),
 
             };
@@ -64,6 +65,7 @@ namespace BamaNews.Presentation.MvcCore.Pages
         {
             await AuthenticationHttpContextExtensions.SignOutAsync(HttpContext, CookieAuthenticationDefaults.AuthenticationScheme);
             return Redirect("/"); ;
+           
         }
 
       

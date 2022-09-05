@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BN.Application.Contract.Comment.CommentViewModel>
+
+<div class="col-lg-4">
+    <div class="card-box">
+     
+        <h4 class="header-title m-t-0 m-b-30">جعبه کامنت ها</h4>
+
+        <div class="inbox-widget nicescroll" style="height: 315px; overflow: hidden; outline: none;" tabindex="5000">
+            @foreach (var item in Model)
+            {
+            <a href="#">
+                <div class="inbox-item">
+                    <div class="inbox-item-img"><img src="/AdminAssets/assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
+                    <p class="inbox-item-author">@item.Id</p>
+                    <p class="inbox-item-text">@item.Title || @item.NewsTitle</p>
+                    <p class="inbox-item-date">@item.CreationDate</p>
+                </div>
+            </a>
+            }
+
+        </div>
+    </div>
+</div>

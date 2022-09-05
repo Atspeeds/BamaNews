@@ -1,8 +1,10 @@
 ﻿using BN.Application;
+using BN.Application.Contract.Comment;
 using BN.Application.Contract.News;
 using BN.Application.Contract.NewsCategory;
 using BN.Application.Contract.User;
 using BN.Application.NewsCategoryApp;
+using BN.Domain.CommentAgg;
 using BN.Domain.NewsAgg;
 using BN.Domain.NewsCategoryAgg;
 using BN.Domain.UserAgg;
@@ -10,6 +12,7 @@ using BN.Infrastrure.EFCore;
 using BN.Infrastrure.EFCore.Repository;
 using BN.Infrastrure.EFCore.Repository.NewsCategoryRepos;
 using BN.Infrastrure.EFCore.Repository.NewsRepos;
+using BN.Infrastrure.Query.CommentQuery;
 using BN.Infrastrure.Query.NewsQuerys;
 using BN.Infrastrure.Query.UserQuerys;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +39,10 @@ namespace BN.Infrastrure.Core.DependenceIOC
             services.AddTransient<IUserRepository, UserRepository>();
 
             services.AddTransient<IUserApplication, UserApplication>();
+            //Comment
+            services.AddTransient<ICommentApplication, CommentApplication>();
+
+            services.AddTransient<ICommentRepository, CommentRepository>();
 
             #endregion
 
@@ -43,6 +50,7 @@ namespace BN.Infrastrure.Core.DependenceIOC
             #region Query View
             services.AddTransient<INewsQuery, NewsQuery>();
             services.AddTransient<IUserQuery, UserQuery>();
+            services.AddTransient<ICommentQuery, CommentQuery>();
             #endregion
 
 

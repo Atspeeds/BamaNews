@@ -120,3 +120,5 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debu
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Register.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\Components\CommentAll\Default.cshtml.g.cs
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BamaNews.Presentation.MvcCore\obj\Debug\net5.0\Razor\Pages\Shared\Components\CommentNews\default.cshtml.g.cs

@@ -1,5 +1,7 @@
-﻿using BN.Domain.NewsCategoryAgg;
+﻿using BN.Domain.CommentAgg;
+using BN.Domain.NewsCategoryAgg;
 using System;
+using System.Collections.Generic;
 
 namespace BN.Domain.NewsAgg
 {
@@ -18,6 +20,9 @@ namespace BN.Domain.NewsAgg
         // News To NewsCategory
         public int NewsCategoryId { get; private set; }
         public NewsCategory NewsCategory { get; private set; }
+
+        //News To Comment
+        public IEnumerable<Comment> Comments { get; set; }
 
 
         protected News()

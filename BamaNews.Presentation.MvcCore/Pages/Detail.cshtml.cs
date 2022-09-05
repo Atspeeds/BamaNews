@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Security.Claims;
+using BN.Infrastrure.Query.CommentQuery;
 using BN.Infrastrure.Query.NewsQuerys;
 using BN.Infrastrure.Query.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +11,11 @@ namespace BamaNews.Presentation.MvcCore.Pages
     {
 
         private readonly INewsQuery _NewsQuery;
-        public DetailModel(INewsQuery newsQuery)
+        private readonly ICommentQuery _CommentQuery;
+        public DetailModel(INewsQuery newsQuery, ICommentQuery commentQuery)
         {
             _NewsQuery = newsQuery;
+            _CommentQuery = commentQuery;
         }
 
         public NewsView NewsModel { get; set; }
@@ -25,5 +25,12 @@ namespace BamaNews.Presentation.MvcCore.Pages
             NewsModel = _NewsQuery.SelectRow(id);
         }
 
+        public IActionResult OnPostComment(CommentView comment)
+        {
+            int userid = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            comment.UserId = userid;
+            _CommentQuery.AddComment(comment);
+            return RedirectToPage("/Detail", new { id = comment.NewsId });
+        }
     }
 }

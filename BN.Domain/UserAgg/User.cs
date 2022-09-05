@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BN.Domain.CommentAgg;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,14 @@ namespace BN.Domain.UserAgg
         public string Passwoard { get; private set; }
         public bool IsAdmin { get; private set; }
 
+        //Relation Shipts
+
+        //User To Comment
+        public IEnumerable<Comment> Comment { get; set; }
+
+        protected User()
+        {
+        }
 
         public User(string userName, string email, string userAvatar, string passwoard)
         {

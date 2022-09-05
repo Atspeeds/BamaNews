@@ -25,7 +25,9 @@ namespace BN.Infrastrure.EFCore.Mapping
             builder.HasOne(x => x.NewsCategory)
                 .WithMany(z => z.News).HasForeignKey(y => y.NewsCategoryId);
 
-
+            //Relation Ship To Comment
+            builder.HasMany(x => x.Comments).WithOne(z => z.News)
+                .HasForeignKey(y => y.NewsId);
         }
     }
 }
