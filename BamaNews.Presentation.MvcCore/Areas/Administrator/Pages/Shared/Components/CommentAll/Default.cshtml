@@ -1,21 +1,53 @@
 ﻿@model IEnumerable<BN.Application.Contract.Comment.CommentViewModel>
 
+
+
+
 <div class="col-lg-4">
     <div class="card-box">
-     
+
         <h4 class="header-title m-t-0 m-b-30">جعبه کامنت ها</h4>
 
         <div class="inbox-widget nicescroll" style="height: 315px; overflow: hidden; outline: none;" tabindex="5000">
             @foreach (var item in Model)
             {
-            <a href="#">
-                <div class="inbox-item">
-                    <div class="inbox-item-img"><img src="/AdminAssets/assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
-                    <p class="inbox-item-author">@item.Id</p>
-                    <p class="inbox-item-text">@item.Title || @item.NewsTitle</p>
-                    <p class="inbox-item-date">@item.CreationDate</p>
-                </div>
-            </a>
+
+            <div class="inbox-item">
+                <div class="inbox-item-img"><img src="/AdminAssets/assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
+                <p class="inbox-item-author">@item.UserName</p>
+                <p class="inbox-item-text">@item.NewsTitle</p>
+                <p class="inbox-item-date"></p>
+                <p class="inbox-item-date">@item.CreationDate</p>
+                @if (item.StatusComment == 0)
+                {
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <i class="zmdi zmdi-check"></i>
+                        <span style="color:cornflowerblue">جدید</span>
+                    </div>
+                    <details>
+                        <summary>نمایش کامنت</summary>
+                        <p>@item.Title</p>
+                    </details>
+                    <br />
+                    <a class="btn btn-icon waves-effect waves-light btn-danger m-b-5"> <i class="fa fa-remove"></i> </a>
+                    <a class="btn btn-icon waves-effect waves-light btn-success m-b-5"> <i class="fa fa-thumbs-o-up"></i> </a>
+                    
+
+                }
+                @if (item.StatusComment == 1)
+                {
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <i class="zmdi zmdi-check-all"></i><span>ثبت</span>
+                    </div>
+                }
+                @if (item.StatusComment == 2)
+                {
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <i class="zmdi zmdi-minus"></i> <span>کنسل شده</span>
+                    </div>
+
+                }
+            </div>
             }
 
         </div>

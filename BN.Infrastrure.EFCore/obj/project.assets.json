@@ -1542,6 +1542,16 @@
         "runtime": {
           "bin/placeholder/BN.Domain.dll": {}
         }
+      },
+      "FrameWork/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FrameWork.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrameWork.dll": {}
+        }
       }
     }
   },
@@ -5820,11 +5830,17 @@
       "type": "project",
       "path": "../BN.Domain/BN.Domain.csproj",
       "msbuildProject": "../BN.Domain/BN.Domain.csproj"
+    },
+    "FrameWork/1.0.0": {
+      "type": "project",
+      "path": "../FrameWork/FrameWork.csproj",
+      "msbuildProject": "../FrameWork/FrameWork.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "BN.Domain >= 1.0.0",
+      "FrameWork >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0"
@@ -5864,6 +5880,9 @@
           "projectReferences": {
             "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Domain\\BN.Domain.csproj": {
               "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Domain\\BN.Domain.csproj"
+            },
+            "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\FrameWork\\FrameWork.csproj": {
+              "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\FrameWork\\FrameWork.csproj"
             }
           }
         }

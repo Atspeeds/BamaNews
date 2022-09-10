@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BN.Domain\BN.Domain.csproj" />
+    <ProjectReference Include="..\FrameWork\FrameWork.csproj" />
   </ItemGroup>
 
 </Project>

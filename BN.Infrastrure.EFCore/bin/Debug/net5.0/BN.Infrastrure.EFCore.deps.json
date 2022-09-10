@@ -9,6 +9,7 @@
       "BN.Infrastrure.EFCore/1.0.0": {
         "dependencies": {
           "BN.Domain": "1.0.0",
+          "FrameWork": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0"
@@ -1073,6 +1074,11 @@
         "runtime": {
           "BN.Domain.dll": {}
         }
+      },
+      "FrameWork/1.0.0": {
+        "runtime": {
+          "FrameWork.dll": {}
+        }
       }
     }
   },
@@ -1767,6 +1773,11 @@
       "sha512": ""
     },
     "BN.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FrameWork/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -2971,6 +2971,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "BN.Domain": "1.0.0",
+          "FrameWork": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
         },

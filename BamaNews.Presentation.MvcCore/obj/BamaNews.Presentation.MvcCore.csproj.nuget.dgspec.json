@@ -376,6 +376,9 @@
             "projectReferences": {
               "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Domain\\BN.Domain.csproj": {
                 "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Domain\\BN.Domain.csproj"
+              },
+              "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\FrameWork\\FrameWork.csproj": {
+                "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\FrameWork\\FrameWork.csproj"
               }
             }
           }
