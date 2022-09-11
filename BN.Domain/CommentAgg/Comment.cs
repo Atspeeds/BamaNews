@@ -1,7 +1,6 @@
 ﻿using BN.Domain.NewsAgg;
 using BN.Domain.UserAgg;
 using System;
-using System.Collections.Generic;
 
 namespace BN.Domain.CommentAgg
 {
@@ -35,6 +34,16 @@ namespace BN.Domain.CommentAgg
             UserId = userId;
             StatusComment = Status.NewComment;
             Creationdate = DateTime.Now;
+        }
+
+        public void confirmed()
+        {
+            this.StatusComment = Status.confirmed;
+        }
+
+        public void cancelled()
+        {
+            this.StatusComment = Status.cancelled;
         }
 
 

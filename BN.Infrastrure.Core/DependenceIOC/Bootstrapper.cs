@@ -1,5 +1,5 @@
 ﻿using BN.Application;
-using BN.Application.Contract.Comment;
+using BN.Application.Contract.Comments;
 using BN.Application.Contract.News;
 using BN.Application.Contract.NewsCategory;
 using BN.Application.Contract.User;

@@ -1,4 +1,4 @@
-﻿using BN.Application.Contract.Comment;
+﻿using BN.Application.Contract.Comments;
 using BN.Domain.CommentAgg;
 using BN.Infrastrure.Query;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +36,11 @@ namespace BN.Infrastrure.EFCore.Repository
                     UserId=x.UserId,
                     NewsId=x.NewsId
                 }).AsNoTracking().OrderBy(z => z.StatusComment).ToList();
+        }
+
+        public Comment Row(int id)
+        {
+            return _Context.Comments.SingleOrDefault(x => x.Comment_Id == id);
         }
 
         public void Save()

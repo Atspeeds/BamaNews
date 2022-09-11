@@ -12,12 +12,17 @@
         <!-- start row News -->
         @await Component.InvokeAsync("NewsAll")
         <!-- End row News -->
-
         <!-- start row User -->
-        @await Component.InvokeAsync("UserAll")
-        <!-- End row User -->
+        <div class="row">
 
-    </div> 
+            @await Component.InvokeAsync("CommentAll")
+            <!-- end col -->
+            @await Component.InvokeAsync("UserAll")
+            <!-- End row User -->
+
+        </div>
+
+    </div>
     <!-- container -->
 
 </div>

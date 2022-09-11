@@ -1,4 +1,4 @@
-﻿using BN.Application.Contract.Comment;
+﻿using BN.Application.Contract.Comments;
 using BN.Domain.CommentAgg;
 using System.Collections.Generic;
 
@@ -19,10 +19,32 @@ namespace BN.Application
                                     comment.NewsId,comment.UserId));
         }
 
+        public void CommentCancelled(int id)
+        {
+            var comment = SelectRowComment(id);
+            comment.cancelled();
+            _CommentRepository.Save();
+        }
+
+        public void CommentConfirmed(int id)
+        {
+            var comment = SelectRowComment(id);
+            comment.confirmed();
+            _CommentRepository.Save();
+
+        }
+
         public IEnumerable<CommentViewModel> SelectAllComment()
         {
             return _CommentRepository.All();
         }
+
+
+        public Comment SelectRowComment(int id)
+        {
+            return _CommentRepository.Row(id);
+        }
+
 
     }
 }

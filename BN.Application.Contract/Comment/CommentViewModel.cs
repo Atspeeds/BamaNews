@@ -1,4 +1,4 @@
-﻿namespace BN.Application.Contract.Comment
+﻿namespace BN.Application.Contract.Comments
 {
     public class CommentViewModel
     {

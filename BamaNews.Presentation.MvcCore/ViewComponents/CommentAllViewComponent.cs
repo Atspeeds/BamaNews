@@ -1,4 +1,4 @@
-﻿using BN.Application.Contract.Comment;
+﻿using BN.Application.Contract.Comments;
 using BN.Infrastrure.Query.NewsQuerys;
 using Microsoft.AspNetCore.Mvc;
 

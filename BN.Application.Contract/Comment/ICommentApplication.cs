@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace BN.Application.Contract.Comment
+namespace BN.Application.Contract.Comments
 {
     public interface ICommentApplication
     {
         void AddComment(CommentViewModel comment);
         IEnumerable<CommentViewModel> SelectAllComment();
+        void CommentConfirmed(int id);
+        void CommentCancelled(int id);
+
+
     }
 }

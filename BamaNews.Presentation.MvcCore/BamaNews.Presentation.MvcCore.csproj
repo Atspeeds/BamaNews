@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Administrator\Pages\Comment.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,6 +22,18 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\AdminAssets\assets\plugins\jstree\themes\default\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Areas\Administrator\Pages\Comment.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Areas\Administrator\Pages\Comment.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Administrator\Pages\Comment.cshtml" />
   </ItemGroup>
 
 </Project>

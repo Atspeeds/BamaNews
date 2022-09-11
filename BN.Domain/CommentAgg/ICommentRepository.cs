@@ -1,4 +1,4 @@
-﻿using BN.Application.Contract.Comment;
+﻿using BN.Application.Contract.Comments;
 using System.Collections.Generic;
 
 namespace BN.Domain.CommentAgg
@@ -8,5 +8,6 @@ namespace BN.Domain.CommentAgg
         void Add(Comment comment);
         void Save();
         IEnumerable<CommentViewModel> All();
+        Comment Row(int id);
     }
 }
