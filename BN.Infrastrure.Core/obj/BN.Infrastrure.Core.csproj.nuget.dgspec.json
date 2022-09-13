@@ -157,6 +157,9 @@
             "projectReferences": {
               "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj": {
                 "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\BN.Application.Contract\\BN.Application.Contract.csproj"
+              },
+              "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\FrameWork\\FrameWork.csproj": {
+                "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\BamaNews_APP\\FrameWork\\FrameWork.csproj"
               }
             }
           }
@@ -465,6 +468,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using FrameWork.Infrastrure;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace BN.Domain.NewsCategoryAgg
 {
-    public interface INewsCategoryRepository
+    public interface INewsCategoryRepository:IGenericRepository<int, NewsCategory>
     {
-        List<NewsCategory> All();
-        NewsCategory Row(int id);
-        void Add(NewsCategory command);
-        void Save();
+
     }
 }

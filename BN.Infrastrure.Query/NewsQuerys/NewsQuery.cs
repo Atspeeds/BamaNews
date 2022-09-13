@@ -22,12 +22,12 @@ namespace BN.Infrastrure.Query.NewsQuerys
             var result = _Context.News.Include(c => c.NewsCategory)
                   .Select(x => new NewsView()
                   {
-                      Id = x.NewsId,
+                      Id = x.Id,
                       Title = x.NewsTitle,
                       Image = x.NewsImage,
                       NewsCategory = x.NewsCategory.CategoryName,
                       Content = x.NewsContent,
-                      CreationDate = x.CreationDate.ToString(),
+                      CreationDate = x.Creationdate.Toshamsi(),
                       ShortDescription = x.NewsShortDescription
                   }).OrderBy(x => x.CreationDate).AsNoTracking();
 
@@ -39,12 +39,12 @@ namespace BN.Infrastrure.Query.NewsQuerys
             var result = _Context.News.Include(c => c.NewsCategory)
                  .Select(x => new NewsView()
                  {
-                     Id = x.NewsId,
+                     Id = x.Id,
                      Title = x.NewsTitle,
                      Image = x.NewsImage,
                      NewsCategory = x.NewsCategory.CategoryName,
                      Content = x.NewsContent,
-                     CreationDate = x.CreationDate.ToString(),
+                     CreationDate = x.Creationdate.ToString(),
                      ShortDescription = x.NewsShortDescription
                  }).OrderBy(x => x.CreationDate).AsNoTracking();
 
@@ -55,18 +55,19 @@ namespace BN.Infrastrure.Query.NewsQuerys
         public NewsView SelectRow(int id)
         {
             var result = _Context.News.Include(c=>c.NewsCategory)
-                .SingleOrDefault(x => x.NewsId == id);
+                .SingleOrDefault(x => x.Id == id);
                 
             return new NewsView()
             {
-                Id=result.NewsId,
+                Id=result.Id,
                 Title=result.NewsTitle,
                 Content=result.NewsContent,
-                CreationDate=result.CreationDate.Toshamsi(),
+                CreationDate=result.Creationdate.Toshamsi(),
                 Image=result.NewsImage,
                 ShortDescription=result.NewsShortDescription,
                 NewsCategory=result.NewsCategory.CategoryName
             };
         }
+
     }
 }

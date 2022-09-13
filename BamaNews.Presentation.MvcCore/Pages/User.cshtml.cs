@@ -41,10 +41,10 @@ namespace BamaNews.Presentation.MvcCore.Pages
             }
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.User_Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim("IsAdmin", user.IsAdmin.ToString()),
-                new Claim("UserId", user.User_Id.ToString()),
+                new Claim("UserId", user.Id.ToString()),
                 // new Claim("CodeMeli", user.Email),
 
             };

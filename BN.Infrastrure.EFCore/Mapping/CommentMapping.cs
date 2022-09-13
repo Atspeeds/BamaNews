@@ -9,7 +9,7 @@ namespace BN.Infrastrure.EFCore.Mapping
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
             builder.ToTable("Comment");
-            builder.HasKey(x => x.Comment_Id);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.TitleComment).HasMaxLength(100).IsRequired();
             builder.Property(x => x.Message).HasMaxLength(500).IsRequired();

@@ -2095,7 +2095,8 @@
       },
       "BN.Domain/1.0.0": {
         "dependencies": {
-          "BN.Application.Contract": "1.0.0"
+          "BN.Application.Contract": "1.0.0",
+          "FrameWork": "1.0.0"
         },
         "runtime": {
           "BN.Domain.dll": {}
@@ -2124,6 +2125,9 @@
         }
       },
       "FrameWork/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
         "runtime": {
           "FrameWork.dll": {}
         }

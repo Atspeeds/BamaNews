@@ -41,5 +41,6 @@ namespace BN.Infrastrure.Query.UserQuerys
             return user;
         }
 
+
     }
 }

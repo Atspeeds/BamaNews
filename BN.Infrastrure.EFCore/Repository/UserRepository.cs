@@ -23,9 +23,9 @@ namespace BN.Infrastrure.EFCore.Repository
         {
             return _NewsContext.Users.Select(x => new UserViewModel()
             {
-                UserId=x.User_Id,
+                UserId=x.Id,
                 UserName=x.UserName,
-                CreationDate=x.CreationDate,
+                CreationDate=x.Creationdate,
                 Email=x.Email,
                 Passwoard=x.Passwoard,
                 UserAvatar=x.UserAvatar,

@@ -13,3 +13,5 @@ C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Domain\obj\Debug\net5.0\BN.Domain.p
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Domain\bin\Debug\net5.0\BN.Application.Contract.dll
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Domain\bin\Debug\net5.0\BN.Application.Contract.pdb
 C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Domain\obj\Debug\net5.0\BN.Domain.csproj.CopyComplete
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Domain\bin\Debug\net5.0\FrameWork.dll
+C:\Users\AMIRPC\source\repos\BamaNews_APP\BN.Domain\bin\Debug\net5.0\FrameWork.pdb

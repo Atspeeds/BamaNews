@@ -1,16 +1,16 @@
 ﻿using BN.Domain.NewsAgg;
 using BN.Domain.UserAgg;
+using FrameWork.Domain;
 using System;
 
 namespace BN.Domain.CommentAgg
 {
-    public class Comment
+    public class Comment : DomainBase<int>
     {
-        public int Comment_Id { get; private set; }
         public string TitleComment { get; private set; }
         public string Message { get; private set; }
         public int StatusComment { get; private set; } // new = 0 confirmed = 1 cancelled = 2  
-        public DateTime Creationdate { get; private set; }
+
 
         //Relation Shipts
 
@@ -33,7 +33,6 @@ namespace BN.Domain.CommentAgg
             NewsId = newsId;
             UserId = userId;
             StatusComment = Status.NewComment;
-            Creationdate = DateTime.Now;
         }
 
         public void confirmed()

@@ -1,8 +1,8 @@
 ﻿using BN.Application.Contract.NewsCategory;
 using BN.Domain.NewsCategoryAgg;
+using FrameWork.Infrastrure;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace BN.Application.NewsCategoryApp
 {
@@ -10,30 +10,36 @@ namespace BN.Application.NewsCategoryApp
     {
         private readonly INewsCategoryRepository _NewsCategoryRepository;
 
-        public NewsCategoryApplication(INewsCategoryRepository newsCategoryRepository)
+        private readonly IUnitOfWork _UnitOfWork;
+
+        public NewsCategoryApplication(INewsCategoryRepository newsCategoryRepository, IUnitOfWork unitofwork)
         {
             _NewsCategoryRepository = newsCategoryRepository;
+            _UnitOfWork = unitofwork;
         }
 
 
         public void ActivateNewsCategory(int id)
         {
-            var newscategory = _NewsCategoryRepository.Row(id);
+            _UnitOfWork.BeginTran();
+            var newscategory = _NewsCategoryRepository.GetT(id);
             newscategory.Active();
-            _NewsCategoryRepository.Save();
-
+            _UnitOfWork.CommitTran();
         }
 
         public bool AddNewsCategory(CreateNewCategoryViewModel command)
         {
             try
             {
-                var newscategory = new NewsCategory(command.Name,command.Description);
-                _NewsCategoryRepository.Add(newscategory);
+                _UnitOfWork.BeginTran();
+                var newscategory = new NewsCategory(command.Name, command.Description);
+                _NewsCategoryRepository.CreateT(newscategory);
+                _UnitOfWork.CommitTran();
                 return true;
             }
             catch
             {
+                _UnitOfWork.RollBackTran();
                 return false;
             }
         }
@@ -42,13 +48,15 @@ namespace BN.Application.NewsCategoryApp
         {
             try
             {
-                var newscategory = _NewsCategoryRepository.Row(command.id);
-                newscategory.Edit(command.Name,command.Description);
-                _NewsCategoryRepository.Save();
+                _UnitOfWork.BeginTran();
+                var newscategory = _NewsCategoryRepository.GetT(command.id);
+                newscategory.Edit(command.Name, command.Description);
+                _UnitOfWork.CommitTran();
                 return true;
             }
             catch
             {
+                _UnitOfWork.RollBackTran();
                 return false;
             }
         }
@@ -56,15 +64,16 @@ namespace BN.Application.NewsCategoryApp
 
         public void InActivateNewsCategory(int id)
         {
-            var newscategory = _NewsCategoryRepository.Row(id);
+            _UnitOfWork.BeginTran();
+            var newscategory = _NewsCategoryRepository.GetT(id);
             newscategory.InActive();
-            _NewsCategoryRepository.Save();
+            _UnitOfWork.CommitTran();
         }
 
 
         public List<NewsCategoryViewModel> SelectAllNewsCategory()
         {
-            var AllNewsCategory = _NewsCategoryRepository.All();
+            var AllNewsCategory = _NewsCategoryRepository.AllT();
 
             var newscategorys = new List<NewsCategoryViewModel>();
 
@@ -72,7 +81,7 @@ namespace BN.Application.NewsCategoryApp
             {
                 newscategorys.Add(new NewsCategoryViewModel()
                 {
-                    Id = item.CategoryId,
+                    Id = item.Id,
                     Name = item.CategoryName,
                     Description = item.Description,
                     IsDeleted = item.IsDeleted

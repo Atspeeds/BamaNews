@@ -1,5 +1,8 @@
 ﻿using BN.Application.Contract.News;
+using BN.Domain.CommentAgg;
 using BN.Domain.NewsAgg;
+using BN.Infrastrure.Query;
+using FrameWork.Infrastrure;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Globalization;
@@ -7,12 +10,12 @@ using System.Linq;
 
 namespace BN.Infrastrure.EFCore.Repository.NewsRepos
 {
-    public class NewsRepository : INewsRepository
+    public class NewsRepository : GenericRepository<int, News>, INewsRepository
     {
 
         private readonly BamaNewsContext _Context;
 
-        public NewsRepository(BamaNewsContext context)
+        public NewsRepository(BamaNewsContext context):base(context)
         {
             _Context = context;
         }
@@ -23,32 +26,16 @@ namespace BN.Infrastrure.EFCore.Repository.NewsRepos
             return _Context.News.Include(x => x.NewsCategory)
                   .Select(x => new NewsViewModel()
                   {
-                      Id = x.NewsId,
+                      Id = x.Id,
                       Title = x.NewsTitle,
                       Image = x.NewsImage,
                       IsDeleted = x.IsDeleted,
                       NewsCategory = x.NewsCategory.CategoryName,
-                      CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
+                      CreationDate = x.Creationdate.Toshamsi(),
                       ShortDescription=x.NewsShortDescription,
                       Content=x.NewsContent
 
                   }).AsNoTracking().ToList();
-        }
-
-        public void Create(News command)
-        {
-            _Context.Add(command);
-            Save();
-        }
-
-        public void Save()
-        {
-            _Context.SaveChanges();
-        }
-
-        public News SelectRow(int id)
-        {
-            return _Context.News.FirstOrDefault(x => x.NewsId == id);
         }
 
     }

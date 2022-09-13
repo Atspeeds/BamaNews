@@ -1,11 +1,11 @@
 ﻿using BN.Domain.NewsAgg;
+using FrameWork.Domain;
 using System.Collections.Generic;
 
 namespace BN.Domain.NewsCategoryAgg
 {
-    public class NewsCategory
+    public class NewsCategory : DomainBase<int>
     {
-        public int CategoryId { get; private set; }
         public string CategoryName { get; private set; }
         public string Description { get; private set; }
         public bool IsDeleted { get; private set; }

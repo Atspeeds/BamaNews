@@ -9,7 +9,7 @@ namespace BN.Infrastrure.EFCore.Mapping
         public void Configure(EntityTypeBuilder<News> builder)
         {
             builder.ToTable("News");
-            builder.HasKey(x => x.NewsId);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.NewsTitle).HasMaxLength(200).IsRequired();
 
@@ -19,7 +19,7 @@ namespace BN.Infrastrure.EFCore.Mapping
 
             builder.Property(x => x.NewsContent).IsRequired();
 
-            builder.Property(x => x.CreationDate).IsRequired();
+            builder.Property(x => x.Creationdate).IsRequired();
 
             //Relation Ship To NewsCategory
             builder.HasOne(x => x.NewsCategory)

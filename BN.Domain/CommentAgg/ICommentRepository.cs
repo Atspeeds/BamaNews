@@ -1,13 +1,11 @@
 ﻿using BN.Application.Contract.Comments;
+using FrameWork.Infrastrure;
 using System.Collections.Generic;
 
 namespace BN.Domain.CommentAgg
 {
-    public interface ICommentRepository
+    public interface ICommentRepository: IGenericRepository<int, Comment>
     {
-        void Add(Comment comment);
-        void Save();
         IEnumerable<CommentViewModel> All();
-        Comment Row(int id);
     }
 }

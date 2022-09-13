@@ -14,7 +14,7 @@ namespace BN.Infrastrure.EFCore.Mapping
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("Users");
-            builder.HasKey(x => x.User_Id);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.UserName).HasMaxLength(60).IsRequired();
 
@@ -24,7 +24,7 @@ namespace BN.Infrastrure.EFCore.Mapping
 
             builder.Property(x => x.UserRole).HasMaxLength(255).IsRequired();
 
-            builder.Property(x => x.CreationDate).IsRequired();
+            builder.Property(x => x.Creationdate).IsRequired();
 
             builder.Property(x => x.UserAvatar).HasMaxLength(500).IsRequired();
 

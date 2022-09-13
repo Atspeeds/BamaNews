@@ -15,6 +15,7 @@ using BN.Infrastrure.EFCore.Repository.NewsRepos;
 using BN.Infrastrure.Query.CommentQuery;
 using BN.Infrastrure.Query.NewsQuerys;
 using BN.Infrastrure.Query.UserQuerys;
+using FrameWork.Infrastrure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -43,6 +44,9 @@ namespace BN.Infrastrure.Core.DependenceIOC
             services.AddTransient<ICommentApplication, CommentApplication>();
 
             services.AddTransient<ICommentRepository, CommentRepository>();
+
+            //Unit Of Work 
+            services.AddTransient<IUnitOfWork, UnitOfWorkEf>();
 
             #endregion
 

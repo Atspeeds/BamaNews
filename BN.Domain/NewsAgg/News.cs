@@ -1,19 +1,18 @@
 ﻿using BN.Domain.CommentAgg;
 using BN.Domain.NewsCategoryAgg;
+using FrameWork.Domain;
 using System;
 using System.Collections.Generic;
 
 namespace BN.Domain.NewsAgg
 {
-    public class News
+    public class News : DomainBase<int>
     {
-        public int NewsId { get; private set; }
         public string NewsTitle { get; private set; }
         public string NewsImage { get; private set; }
         public string NewsShortDescription { get; private set; }
         public string NewsContent { get; private set; }
         public bool IsDeleted { get; private set; }
-        public DateTime CreationDate { get; set; }
 
         //Relation Shipts
 
@@ -37,7 +36,6 @@ namespace BN.Domain.NewsAgg
             NewsContent = newsContent;
             NewsCategoryId = newsCategoryId;
             IsDeleted = false;
-            CreationDate = DateTime.Now;
         }
 
         public void Edit(string newsTitle, string newsImage, string newsShortDescription, string newsContent, int newsCategoryId)

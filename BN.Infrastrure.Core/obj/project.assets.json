@@ -2957,7 +2957,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "BN.Application.Contract": "1.0.0"
+          "BN.Application.Contract": "1.0.0",
+          "FrameWork": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BN.Domain.dll": {}
@@ -3001,6 +3002,9 @@
       "FrameWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/FrameWork.dll": {}
         },

@@ -21,7 +21,7 @@ namespace BN.Infrastrure.EFCore.Migrations
 
             modelBuilder.Entity("BN.Domain.CommentAgg.Comment", b =>
                 {
-                    b.Property<int>("Comment_Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -48,7 +48,7 @@ namespace BN.Infrastrure.EFCore.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("Comment_Id");
+                    b.HasKey("Id");
 
                     b.HasIndex("NewsId");
 
@@ -59,12 +59,12 @@ namespace BN.Infrastrure.EFCore.Migrations
 
             modelBuilder.Entity("BN.Domain.NewsAgg.News", b =>
                 {
-                    b.Property<int>("NewsId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime>("Creationdate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
@@ -91,7 +91,7 @@ namespace BN.Infrastrure.EFCore.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.HasKey("NewsId");
+                    b.HasKey("Id");
 
                     b.HasIndex("NewsCategoryId");
 
@@ -100,7 +100,7 @@ namespace BN.Infrastrure.EFCore.Migrations
 
             modelBuilder.Entity("BN.Domain.NewsCategoryAgg.NewsCategory", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -110,6 +110,9 @@ namespace BN.Infrastrure.EFCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<DateTime>("Creationdate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -118,19 +121,19 @@ namespace BN.Infrastrure.EFCore.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.HasKey("CategoryId");
+                    b.HasKey("Id");
 
                     b.ToTable("NewsCategories");
                 });
 
             modelBuilder.Entity("BN.Domain.UserAgg.User", b =>
                 {
-                    b.Property<int>("User_Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime>("Creationdate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
@@ -161,7 +164,7 @@ namespace BN.Infrastrure.EFCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.HasKey("User_Id");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
